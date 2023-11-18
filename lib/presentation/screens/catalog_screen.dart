@@ -28,11 +28,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
   }
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-  }
-
-  @override
   Widget build(BuildContext context) {
     _catalogBloc.add(const CatalogEvent.getProducts());
     return BlocProvider(
@@ -78,11 +73,10 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       child: GridView.builder(
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 295,
-                          crossAxisSpacing: 20,
-                              mainAxisSpacing: 20
-                        ),
+                                crossAxisCount: 2,
+                                mainAxisExtent: 295,
+                                crossAxisSpacing: 20,
+                                mainAxisSpacing: 20),
                         itemCount: products.data.length,
                         itemBuilder: (_, index) => CatalogItem(
                             title: products.data[index].title,
@@ -91,7 +85,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       ),
                     ),
                     orElse: () => const SizedBox(),
-                  )
+                  ),
                 ],
               );
             },

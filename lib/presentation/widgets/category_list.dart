@@ -30,6 +30,8 @@ class _CategoryListState extends State<CategoryList> {
               _value = 0;
               setState(() {});
             },
+            colorTitle:
+                _value == 0 ? context.colors.background : AppColors.gray05Dark,
           ),
           context.appOffsetBox.horizontal4x,
           CategoryItem(
@@ -40,6 +42,8 @@ class _CategoryListState extends State<CategoryList> {
               _value = 1;
               setState(() {});
             },
+            colorTitle:
+                _value == 1 ? context.colors.background : AppColors.gray05Dark,
           ),
           context.appOffsetBox.horizontal4x,
           CategoryItem(
@@ -50,6 +54,8 @@ class _CategoryListState extends State<CategoryList> {
               _value = 2;
               setState(() {});
             },
+            colorTitle:
+                _value == 2 ? context.colors.background : AppColors.gray05Dark,
           ),
           context.appOffsetBox.horizontal4x,
           CategoryItem(
@@ -60,6 +66,8 @@ class _CategoryListState extends State<CategoryList> {
               _value = 3;
               setState(() {});
             },
+            colorTitle:
+                _value == 3 ? context.colors.background : AppColors.gray05Dark,
           ),
           context.appOffsetBox.horizontal4x,
         ],

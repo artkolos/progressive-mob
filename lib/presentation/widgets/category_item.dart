@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:test_pm/presentation/extensions/colors_ext.dart';
 import 'package:test_pm/presentation/extensions/sizes_ext.dart';
 import 'package:test_pm/presentation/extensions/text_styles_ext.dart';
 
@@ -9,10 +8,12 @@ class CategoryItem extends StatelessWidget {
     required this.title,
     required this.color,
     required this.onTap,
+    required this.colorTitle,
   });
 
   final String title;
   final Color color;
+  final Color colorTitle;
   final Function() onTap;
 
   @override
@@ -33,7 +34,7 @@ class CategoryItem extends StatelessWidget {
         child: Text(
           title,
           style: context.textStyles.bodySemiBold.copyWith(
-            color: context.colors.primary,
+            color: colorTitle,
           ),
           textAlign: TextAlign.center,
         ),
